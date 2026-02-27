@@ -2,20 +2,15 @@
 
 int main() {
     int r, c, i, j;
-
     printf("Enter rows and columns: ");
     scanf("%d %d", &r, &c);
-
     int matrix[r][c];
-
     printf("Enter matrix elements:\n");
     for(i = 0; i < r; i++) {
         for(j = 0; j < c; j++) {
             scanf("%d", &matrix[i][j]);
         }
     }
-
-    // Row sums
     for(i = 0; i < r; i++) {
         int rowSum = 0;
         for(j = 0; j < c; j++) {
@@ -23,8 +18,6 @@ int main() {
         }
         printf("Sum of Row %d = %d\n", i+1, rowSum);
     }
-
-    // Column sums
     for(j = 0; j < c; j++) {
         int colSum = 0;
         for(i = 0; i < r; i++) {
@@ -32,6 +25,5 @@ int main() {
         }
         printf("Sum of Column %d = %d\n", j+1, colSum);
     }
-
     return 0;
 }
